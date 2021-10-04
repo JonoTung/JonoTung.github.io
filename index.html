@@ -1,0 +1,217 @@
+<html>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <head>
+        <title>My First Project</title>
+        <link href="css/mainstyle.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div class="rain">
+            
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+                <a href="#">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+            </div>
+                
+            <div id="openNavButton">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+                
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+                
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+              
+            <marquee class="cloudWrapper" id="cloud1" direction="Left" scrollamount="2">
+                <img src="images/clouds/cloud1.png" class="clouds">
+            </marquee>
+            <marquee class="cloudWrapper" id="cloud2" direction="Right" scrollamount="2.6">
+                <img src="images/clouds/cloud2.png" class="clouds">
+            </marquee>
+            <marquee class="cloudWrapper" id="cloud3" direction="Left" scrollamount="2.9">
+                <img src="images/clouds/cloud3.png" class="clouds">
+            </marquee>
+            <marquee class="cloudWrapper" id="cloud4" direction="Right" scrollamount="3.4">
+                <img src="images/clouds/cloud4.png" class="clouds">
+            </marquee>
+            <marquee class="cloudWrapper" id="cloud5" direction="Left" scrollamount="4.1">
+                <img src="images/clouds/cloud5.png" class="clouds">
+            </marquee>
+            <marquee class="cloudWrapper" id="cloud6" direction="Right" scrollamount="4.4">
+                <img src="images/clouds/cloud6.png" class="clouds">
+            </marquee>
+
+            <div id="home">
+                <h1>Jonathan Tung</h1>
+                <p id="slogan">ready to go, rain or shine</p>
+            </div>
+            
+            <script>
+                function openContacts() {
+                    Swal.fire({
+                        title: 'Contact Me!',
+                        icon: 'info',
+                        html:
+                            '<p>LinkedIn: linkedin.com/in/jonotung</p>\n' +
+                            '<p>Email: jonotung@utexas.edu</p>\n',
+                        showConfirmButton: false,
+                        showCloseButton: true
+                    })
+                }
+            </script>
+
+            <div id="infoButtons">
+                <button type="submit" onclick="window.open('css/JonoTungResume.pdf')" class="board">Resume</button>
+                <button class="board" onclick="openContacts()">Contact</button>
+            </div>
+    
+            <div class="section" id="about">
+                <h2>About Me</h2>
+                <marquee class="planeWrapper" loop="1" id="plane" direction="Right" scrollamount="3">
+                    <img src="images/pixelPlane.png" id="plane">
+                </marquee>
+                <p class="board" id="aboutText">
+                    Hello there! Thanks for visiting my page. I'm an aspiring software engineer 
+                    studying Computer Science and Business honors at the University of Texas at Austin. 
+                    I have experience with full stack development, financial modeling, and data analysis. 
+                    If that doesn't sound like what you're looking for, don't worry! I'm always ready to 
+                    learn new things :D
+                </p>
+                <br>
+                <div id="subAbout">
+                    <img src="images/CircleHeadShot.png" id="headShot"></img>
+                    <div class="row board" id="aboutList">
+                        <div class="column">
+                            <h3>Skills</h3>
+                            <p>
+                                Java, Python, C, C++, Git, MySQL, HTML, CSS, JavaScript, 
+                                JSP, REST API, Figma, Excel, R, Canva, Latex
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h3>Coursework</h3>
+                            <p>
+                                - Data Structures<br>
+                                - Comp Architecture<br>
+                                - Operating Systems<br>
+                                - Discrete Math<br>
+                                - Linear Algebra<br>
+                                - Data Science<br>
+                                - Probability/Stats<br>
+                                - Management Information Systems<br>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h3>Interests</h3>
+                            <p>
+                                I love to play tennis, solve Rubik's Cubes, and perform music. I also play
+                                (too many) games: Pokemon Go, League of Legends, and Among Us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="experience">
+                <h2>Experience</h2>
+                <div class="board" id="subExperience">
+                    <img id="gentrifiLogo" src="images/gentrifiLogo.png"></img>
+                    <h3>Software Developer Intern, Gentrifi GPS</h3>
+                    <p id="experienceDesc">
+                        1. Used JSP, CSS, HTML, and JS to restructure Critical Event Reporting backend/frontend to interface with MySQL Database.<br><br>
+                        2. Used REST API to implement live footage features by requesting continuous live footage packets<br><br>
+                        3. Programmed Breadcrumb functionality to plot vehicle routes, detect idling, and display critical events<br><br>
+                        4. Streamlined data collection at endpoint by parsing four JSON location packets simultaneously using Java Servlets
+                    </p>
+                </div>
+            </div>
+            <marquee id="birdWrapper" direction="left" scrollamount="6">
+                <img src="images/flyingBirdLeft.gif" id="bird">
+            </marquee>
+    
+            <div class="section" id="projects">
+                <h2>Projects</h2>
+                <div class="board grid">
+                    <h3>Web Crawler Search Engine</h3>
+                    <p>
+                        A web crawler that scans a network of web pages and stores their contents in an efficient web index structure.
+                        A query engine then parses and interprets queries, returning a list of relevant URLs.
+                        <br>
+                        <br>
+                        Demo:
+                    </p>
+                    <video width="400" height="200" controls id="webCrawlerVid">
+                        <source src="images/webCrawlerDemo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br>
+                    <p>
+                        More details <a href="https://docs.google.com/document/d/11FPDo7PNDIVpOUoCXxPEg6qHsoLfxidXHZnZhZuUMio/edit?usp=sharing" target="_blank">here</a>
+                    </p>
+                </div>
+                <div class="board grid">
+                    <h3>Portfolio Modeling</h3>
+                    <p>
+                        Analyzed beta correlations of individual stocks compared to the overall market under bullish/bearish conditions.
+                        These "biased" beta values represent strong movement with up markets and weaker correlations with down markets.
+                        <br>
+                        <br>
+                        Took advantage of favorable beta correlations to create portfolios that mirror that of the market, removing the least
+                        effective stocks to improve overall performance (called the Dow 29).
+                        <br>
+                        <br>
+                        Compared portfolio performance over time using Monte Carlo simulations to mitigate effects from return erosion.
+                        <br>
+                        <br>
+                        See it <a href="https://1drv.ms/x/s!AiNNMTnm453IhuU3BlQG7wFHXXw-jw?e=uU0Cjy" target="_blank">here</a>
+                    </p>
+                </div>
+                <div class="board grid">
+                    <h3>Tetris Artificial Intelligence System</h3>
+                    <p>
+                        This Tetris simulation includes an AI that can clear thousands of lines in seconds. It is implemented 
+                        using a greedy algorithm that assigns all possible board states to a score before choosing the move that 
+                        yields the highest-scoring state.
+                        <br><br>
+                        This score is weighted on a combination of covariates, including the maximum height, number of holes, and jaggedness.
+                        <br><br><br><br><br>
+                        Try it here
+                        <br>
+                        (Instructions here)
+                        <br><br>
+                        More details <a href="https://docs.google.com/document/d/1IFXfw7MvDCK2vw9K_rkUiGHKoNhrPXfodRsueClV3vo/edit?usp=sharing" target="_blank">here</a>
+                    </p>
+                </div>
+                <div class="board grid">
+                    <h3>Rubik's Cube Solving Algorithm</h3>
+                    <p>
+                        A simple application designed to solve 2x2 Rubik's Cubes using JavaScript and the code.org App Lab.
+                        <br>
+                        <br>
+                        Given an input net of any valid cube permutation, the application will output a sequence of rotations needed to solve the cube.
+                        <br>
+                        <br>
+                        <!-- Demo:
+                        <br>
+                        <br> -->
+                        Try it <a href="https://studio.code.org/projects/applab/vlHMLALLbFmG2P9tEzJu7eeUMZzN4aNIc1zLn1J7BIc" target="_blank">here</a> 
+                        (NOTE: undefined behavior for invalid patterns)
+                    </p>
+                </div>
+            </div>
+
+            <img src="images/umbrellaPerson.png" height="71" width="71" id="person"></img>
+
+        </div>
+
+    </body>
+</html>
