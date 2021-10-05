@@ -7,6 +7,8 @@ body {
     background-image: url('../images/cityv2.png');
     background-repeat: no-repeat;
     background-position-y: bottom;
+    background-position-x: -100px;
+    background-size: 1500px;
 }
 
 * {
@@ -153,7 +155,6 @@ p {
 
 .rain {
     text-align: center;
-    height: 590vh;
     width: 100%;
     background: url('../images/rain.png');
     animation: rain .6s linear infinite;
@@ -176,7 +177,7 @@ button {
     font-family: manaSpace;
     font-size: 20px;
     padding: 5px;
-    margin: 200px 200px 100px 200px;
+    margin: 200px 50px 100px 50px;
 }
 
 button:hover {
@@ -284,11 +285,17 @@ button:hover {
 
 #webCrawlerVid {
     padding: 0;
+    width: 20em;
+    height: 10em;
 }
 
-#person {
+#footer {
+    height: 200px;
+}
+
+/* #person {
     position:absolute;
     top: 561vh;
     z-index: -1;
     left: 97vh;
-}
+} */
